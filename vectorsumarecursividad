@@ -1,0 +1,24 @@
+Algoritmo RecursividadArreglo
+	
+	Escribir "Ingresar valor de n"
+	Leer n
+	
+	Dimension vector[n]
+	
+	Para i <- 1 Hasta n Hacer
+		vector[i] <- Azar(10)
+		Escribir vector[i]
+	FinPara
+	
+	Escribir "La suma del vector es:", sumaarreglo(vector, n)
+	
+FinAlgoritmo
+
+Funcion sumavector <- sumaarreglo(vector, n)
+		Si (n = 1) Entonces
+			sumavector <- vector[n]
+		Sino 
+			sumavector <- vector[n] + sumaarreglo(vector, n-1)
+		FinSi
+	
+	FinFuncion
