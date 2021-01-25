@@ -1,0 +1,27 @@
+//Algoritmo para enviar viajeros en el tiempo a traves de PseInt
+
+Algoritmo MaquinaDelTiempo
+	
+	Escribir "Ingresa una hora de salida viajero!:"
+	Leer hora
+	Escribir "AM o PM"
+	Leer horario
+	Escribir "Cuantas horas en el futuro quieres viajar?"
+	Leer horas
+	
+	horafuturo = (hora + horas)
+	
+	Si (horafuturo > 12 Y horario == "AM") Entonces
+		horario = "PM"
+		horafuturo = horafuturo - 12
+	FinSi
+	
+	Si (horafuturo > 12 Y horario == "PM") Entonces
+		horario = "AM"
+		horafuturo = horafuturo - 12
+	FinSi
+	
+	Escribir  "Has viajado en el futuro y la hora es:",horafuturo,horario 
+	
+	
+FinAlgoritmo
